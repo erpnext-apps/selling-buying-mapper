@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include selling_buying_mapper *.css
+recursive-include selling_buying_mapper *.csv
+recursive-include selling_buying_mapper *.html
+recursive-include selling_buying_mapper *.ico
+recursive-include selling_buying_mapper *.js
+recursive-include selling_buying_mapper *.json
+recursive-include selling_buying_mapper *.md
+recursive-include selling_buying_mapper *.png
+recursive-include selling_buying_mapper *.py
+recursive-include selling_buying_mapper *.svg
+recursive-include selling_buying_mapper *.txt
+recursive-exclude selling_buying_mapper *.pyc
