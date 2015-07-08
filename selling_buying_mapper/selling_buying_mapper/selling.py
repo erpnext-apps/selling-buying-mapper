@@ -22,7 +22,7 @@ def make_purchase_order(source_name, target_doc=None):
 				"name": "sales_order"
 			},
 			"field_no_map": ["address_display", "contact_display", "contact_mobile", "in_words",
-				"contact_email", "net_total", "conversion_rate", "contact_person", "grand_total"],
+				"contact_email", "net_total", "total", "conversion_rate", "contact_person", "grand_total"],
 			"validation": {
 				"docstatus": ["=", 1]
 			}
@@ -32,7 +32,7 @@ def make_purchase_order(source_name, target_doc=None):
 			"field_map": {
 				"stock_uom": "uom"
 			},
-			"field_no_map": ["rate", "base_rate", "price_list_rate", "base_price_list_rate", "base_amount"],
+			"field_no_map": ["rate", "base_rate", "price_list_rate", "base_price_list_rate", "net_rate", "base_net_rate", "amount", "base_amount", "net_amount", "base_net_amount"],
 			"postprocess": _update_item
 		}
 	}, target_doc)
