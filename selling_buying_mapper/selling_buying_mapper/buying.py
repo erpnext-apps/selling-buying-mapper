@@ -12,15 +12,15 @@ def make_sales_invoice(source_name, target_doc=None):
 		"Purchase Invoice": {
 			"doctype": "Sales Invoice",
 			"field_no_map": ["address_display", "contact_display", "contact_mobile", "in_words",
-				"contact_email", "net_total", "conversion_rate", "contact_person", "grand_total",
-				"mode_of_payment", "due_date", "posting_date", "aging_date", "cost_center", "is_opening"],
+				"contact_email", "total", "net_total", "conversion_rate", "contact_person", "grand_total",
+				"mode_of_payment", "due_date", "posting_date", "cost_center", "is_opening"],
 			"validation": {
 				"docstatus": ["=", 1]
 			}
 		},
 		"Purchase Invoice Item": {
 			"doctype": "Sales Invoice Item",
-			"field_no_map": ["rate", "base_rate", "price_list_rate", "base_price_list_rate", "base_amount", "amount"]
+			"field_no_map": ["rate", "base_rate", "price_list_rate", "base_price_list_rate", "net_rate", "base_net_rate", "base_amount", "amount", "net_amount", "base_net_amount"]
 		}
 	}, target_doc)
 
